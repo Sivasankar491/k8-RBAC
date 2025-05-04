@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: expense-trainee-role
+  name: expense-trainee
   namespace: expense
 rules:
 - apiGroups: [""]
@@ -13,7 +13,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: expense-trainee-rolebinding
+  name: expense-trainee
   namespace: expense
 roleRef:
   apiGroup: rbac.authorization.k8s.io
