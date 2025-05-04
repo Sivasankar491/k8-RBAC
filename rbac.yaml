@@ -12,7 +12,7 @@ rules:
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: roleBinding
+kind: RoleBinding
 metadata:
   name: expense-trainee-rolebinding
   namesapce: expense
