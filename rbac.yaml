@@ -3,12 +3,11 @@ kind: Role
 metadata:
   name: expense-trainee-role
   namespace: expense
-  labels:
-    purpose: rbac
 rules:
-- apiGroup: [""]
-  resource: ["pods", "deployments", "services"]
+- apiGroups: [""]
+  resources: ["pods", "services"]
   verbs: ["get", "watch", "list"]
+
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -16,8 +15,6 @@ kind: RoleBinding
 metadata:
   name: expense-trainee-rolebinding
   namesapce: expense
-  labels:
-    purpose: rbac
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -25,4 +22,5 @@ roleRef:
 subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: User
-  name: suresh
+  name: Suresh
+
